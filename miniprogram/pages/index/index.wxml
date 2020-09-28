@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+
+  <div class="footer">
+      <official-account></official-account>
+  </div>
+
+</view>

@@ -1,0 +1,38 @@
+<div class="index">
+    <ul class="page-slidebar">
+        <li class="{{index===0?'cur':''}}" bindtap="index" data-id='0'>薇娅</li>
+        <li class="{{index===1?'cur':''}}" bindtap="index" data-id='1'>李佳琦</li>
+    </ul>
+    <div class="info">
+      <div class="result_item" wx:for="{{searchList}}" wx:key="list">
+        <div bindtap="goToDetail" data-id="{{item.goods_id}}">
+          <image src="{{item.goods_thumbnail_url}}" mode="widthFix" lazy-load="true" />
+          <p class="title">{{item.goods_desc}}</p>
+          <p class="price">
+            券后价:
+            <span>¥{{(item.min_group_price - item.coupon_discount) / 100}}</span>
+          </p>
+          <p class="yuan">
+            券:
+            <em>{{item.coupon_discount/100}}</em>
+            原价:
+            <span>¥{{item.min_group_price / 100}}</span>
+          </p>
+          <p class="sell">
+            销量:
+            <em>{{item.sales_tip}}</em>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="popup" wx:if="{{isShowPopup}}">
+    <div class="mask"></div>
+    <div class="inner">
+      <image src="{{item}}" mode="widthFix" lazy-load="true" wx:for="{{imageList}}" wx:key="detail" />
+    </div>
+    <div class="close" bindtap="closePopup">
+      <image src="close.png" mode="widthFix" lazy-load="true" />
+    </div>
+    <button bindtap="goToShop" data-id="{{now_goods_id}}" class="button">领取优惠券</button>
+  </div>
+</div>

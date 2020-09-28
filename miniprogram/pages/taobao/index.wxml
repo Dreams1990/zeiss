@@ -1,0 +1,15 @@
+<div class="index">
+  <section>
+    <input bindinput="bindKeyInput" placeholder="搜索tao宝优惠券"></input><button bindtap="search_one">搜索</button>
+  </section>
+  <div class="info">
+    <div class="result_item" bindtap="goToShop" data-url="{{item.coupon_share_url}}" data-title="{{item.title}}"
+      wx:for="{{searchList}}" wx:key="list" wx:if="{{item.coupon_share_url}}">
+      <image src="{{item.small_images.string[0]}}" mode="widthFix" lazy-load="true" />
+      <p class="title">{{item.short_title}}</p>
+      <p class="price">券后价:¥{{(item.zk_final_price)}}</p>
+      <p>券:{{item.coupon_info}}</p>
+      <p>原价:{{item.reserve_price}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,156 @@
+<div class="index">
+  <!-- <view class='banner-wrapper'>
+    <swiper class='banner' bindchange='currentChange' autoplay>
+      <block wx:for="{{theme_list}}" wx:key='index'>
+        <swiper-item class='img-wrapper'>
+          <image class='image' src="{{item.image_url}}" data-id="{{item.id}}"  bindtap="themeLink"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='dots'>
+      <view class="dot {{index === currentIndex ? 'cur' : ''}}" wx:for="{{dots}}" wx:key='index'>
+      </view>
+    </view>
+  </view> -->
+  <scroll-view class='cvs' scroll-x>
+    <view class='cv' bindtap="link" data-id='2'>
+      <image class='avatar' src="icon_02.png"></image>
+      <view class='nickname'>默认红包</view>
+    </view>
+    <view class='cv' bindtap="link" data-id='3'>
+      <image class='avatar' src="icon_02.png"></image>
+      <view class='nickname'>新人红包</view>
+    </view>
+    <view class='cv' bindtap="link" data-id='5'>
+      <image class='avatar' src="icon_01.png"></image>
+      <view class='nickname'>员工内购</view>
+    </view>
+    <view class='cv' bindtap="link" data-id='7'>
+      <image class='avatar' src="icon_03.png"></image>
+      <view class='nickname'>大促会场</view>
+    </view>
+  </scroll-view>
+  <div class="container-wrapper">
+    <view class='container02'>
+      <view class='more-wrapper' bindtap='more'>
+        <text class='more'  data-id="0"  bindtap="themeLink02">查看更多</text>
+        <image class='icon-more' src='/images/more.png'></image>
+      </view>
+      <view class='title'>
+        <icon class='icon'></icon>
+        <view class='title-text'>1.9包邮</view>
+      </view>
+      <scroll-view class='albums-wrapper' scroll-x>
+        <div class='album' wx:for="{{baihuo_list}}" wx:key='id' hover-class='none' form-type='submit' bindtap='selectAlbum' data-albumid="{{item.id}}" bindtap="goToDetail" data-id="{{item.goods_id}}">
+          <view class='cover-wrapper'>
+            <image class='cover' src="{{item.goods_image_url}}" mode="widthFix"></image>
+          </view>
+          <view class='name-wrapper'>
+            <div class='name'>{{item.goods_name}}</div>
+          </view>
+            <!-- <text class='up'>{{item.up}}</text> -->
+
+        </div>
+      </scroll-view>
+    </view>
+    <view class='container02'>
+          <view class='more-wrapper' bindtap='more' data-id="1"  bindtap="themeLink02">
+            <text class='more'>查看更多</text>
+            <image class='icon-more' src='/images/more.png'></image>
+          </view>
+          <view class='title'>
+            <icon class='icon'></icon>
+            <view class='title-text'>今日爆款</view>
+          </view>
+          <scroll-view class='albums-wrapper' scroll-x>
+            <div class='album' wx:for="{{muyin_list}}" wx:key='id' hover-class='none' form-type='submit' bindtap='selectAlbum' data-albumid="{{item.id}}" bindtap="goToDetail" data-id="{{item.goods_id}}">
+              <view class='cover-wrapper'>
+                <image class='cover' src="{{item.goods_image_url}}" mode="widthFix"></image>
+              </view>
+              <view class='name-wrapper'>
+                <div class='name'>{{item.goods_name}}</div>
+              </view>
+                <!-- <text class='up'>{{item.up}}</text> -->
+
+            </div>
+          </scroll-view>
+    </view>
+    <view class='container02'>
+    <view class='more-wrapper' bindtap='more' data-id="2"  bindtap="themeLink02">
+            <text class='more'>查看更多</text>
+            <image class='icon-more' src='/images/more.png'></image>
+          </view>
+          <view class='title'>
+            <icon class='icon'></icon>
+            <view class='title-text'>品牌清仓</view>
+          </view>
+          <scroll-view class='albums-wrapper' scroll-x>
+            <div class='album' wx:for="{{qincang_list}}" wx:key='id' hover-class='none' form-type='submit' bindtap='selectAlbum' data-albumid="{{item.id}}" bindtap="goToDetail" data-id="{{item.goods_id}}">
+              <view class='cover-wrapper'>
+                <image class='cover' src="{{item.goods_image_url}}" mode="widthFix"></image>
+              </view>
+              <view class='name-wrapper'>
+                <div class='name'>{{item.goods_name}}</div>
+              </view>
+                <!-- <text class='up'>{{item.up}}</text> -->
+
+            </div>
+          </scroll-view>
+    </view>
+    <view class='container02'>
+    <view class='more-wrapper' bindtap='more'>
+            <text class='more' data-id="5"  bindtap="themeLink02">查看更多</text>
+            <image class='icon-more' src='/images/more.png'></image>
+          </view>
+          <view class='title'>
+            <icon class='icon'></icon>
+            <view class='title-text'>实时热销</view>
+          </view>
+          <scroll-view class='albums-wrapper' scroll-x>
+            <div class='album' wx:for="{{rexiao_list}}" wx:key='id' hover-class='none' form-type='submit' bindtap='selectAlbum' data-albumid="{{item.id}}" bindtap="goToDetail" data-id="{{item.goods_id}}">
+              <view class='cover-wrapper'>
+                <image class='cover' src="{{item.goods_image_url}}" mode="widthFix"></image>
+              </view>
+              <view class='name-wrapper'>
+                <div class='name'>{{item.goods_name}}</div>
+              </view>
+                <!-- <text class='up'>{{item.up}}</text> -->
+
+            </div>
+          </scroll-view>
+    </view>
+    <view class='container02'>
+    <view class='more-wrapper' bindtap='more' data-id="4"  bindtap="themeLink02">
+            <text class='more'>查看更多</text>
+            <image class='icon-more' src='/images/more.png'></image>
+          </view>
+          <view class='title'>
+            <icon class='icon'></icon>
+            <view class='title-text'>猜你喜欢</view>
+          </view>
+          <scroll-view class='albums-wrapper' scroll-x>
+            <div class='album' wx:for="{{xihuan_list}}" wx:key='id' hover-class='none' form-type='submit' bindtap='selectAlbum' data-albumid="{{item.id}}" bindtap="goToDetail" data-id="{{item.goods_id}}">
+              <view class='cover-wrapper'>
+                <image class='cover' src="{{item.goods_image_url}}" mode="widthFix"></image>
+              </view>
+              <view class='name-wrapper'>
+                <div class='name'>{{item.goods_name}}</div>
+              </view>
+                <!-- <text class='up'>{{item.up}}</text> -->
+
+            </div>
+          </scroll-view>
+    </view>
+
+    <div class="popup" wx:if="{{isShowPopup}}">
+      <div class="mask"></div>
+      <div class="inner">
+        <image src="{{item}}" mode="widthFix" lazy-load="true" wx:for="{{imageList}}" wx:key="detail" />
+      </div>
+      <div class="close" bindtap="closePopup">
+        <image src="close.png" mode="widthFix" lazy-load="true" />
+      </div>
+      <button bindtap="goToShop" data-id="{{now_goods_id}}" class="button">领取优惠券</button>
+    </div>
+  </div>
+</div>

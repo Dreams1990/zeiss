@@ -1,0 +1,14 @@
+<div class="index">
+  <section>
+    <input bindinput="bindKeyInput" placeholder="搜索京东优惠券"></input><button bindtap="search">搜索</button>
+  </section>
+  <div class="result_item" bindtap="goToShop" data-materialId="{{item.materialUrl}}" wx:for="{{searchList}}"
+    wx:key="list">
+    <image src="{{item.imageInfo.imageList[0].url}}" mode="widthFix" lazy-load="true" />
+    <p class="title">{{item.skuName}}</p>
+    <p class="price">券后价:¥{{(item.priceInfo.price - item.couponInfo.couponList[0].discount)}}</p>
+    <p>券:{{item.couponInfo.couponList[0].discount}}</p>
+    <p>原价:{{item.priceInfo.price}}</p>
+
+  </div>
+</div>

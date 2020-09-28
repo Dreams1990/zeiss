@@ -1,0 +1,31 @@
+.info {
+  padding-top:100px;
+  float: left;
+  width: 100%;
+}
+.index .title{
+  height: 32px;
+  line-height: 32px;
+  overflow: hidden;
+  display: block;
+
+}
+
+.index .result_item{
+  width: 49%;
+  float: left;
+  background: #fff;
+    margin-right: 0;
+  margin-bottom:2%;
+}
+.index .result_item:nth-child(2n){
+    margin-right: 2%;
+}
+.index .result_item image{
+  width: 100%
+}
+
+
+.index .price{
+  display: block;
+}
